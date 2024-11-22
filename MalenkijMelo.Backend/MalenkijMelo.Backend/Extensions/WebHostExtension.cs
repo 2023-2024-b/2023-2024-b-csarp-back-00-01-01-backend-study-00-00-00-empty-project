@@ -8,5 +8,7 @@ namespace MalenkijMelo.Backend.Extensions
         {
             webApplicationBuilder.WebHost.UseUrls("https://0.0.0.0:7020/");
         }
+
     }
+
 }

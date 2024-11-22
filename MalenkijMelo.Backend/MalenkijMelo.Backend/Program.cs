@@ -27,8 +27,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors("MalenkijMelo");
 
+app.ConfigureWebApp();
 
 
 app.Run();
