@@ -1,10 +1,14 @@
-﻿namespace PointToPoint.Extension
+﻿using Microsoft.EntityFrameworkCore;
+using PointToPoint.Context;
+
+namespace PointToPoint.Extension
 {
     public static class PoinToPointBackendExtension
     {
         public static void AddBackend(this IServiceCollection services)
         { 
             services.ConfigureCors();
+            services.ConfigureInMemoryContext();
         }
         private static void ConfigureCors(this IServiceCollection services)
         {
@@ -19,7 +23,16 @@
                 )
            );
         }
+        public static void ConfigureInMemoryContext(this IServiceCollection services)
+        {
+            string dbNameInMemoryContext = "PtP" + Guid.NewGuid();
+            services.AddDbContext<PointToPointInMemoryContext>
+            (
+                 options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),
+                 ServiceLifetime.Scoped,
+                 ServiceLifetime.Scoped
+            );
+        }
 
-       
     }
 }
