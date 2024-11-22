@@ -6,6 +6,17 @@ namespace MalenkijMelo.Extensions
     {
         public static void ConfigureWebApp(this WebApplication app)
         {
+            app.ConfigureWebAppCors();
+            app.ConfigureInMemoryTestData();
+        }
+
+        private static void ConfigureWebAppCors(this WebApplication app)
+        {
+            app.UseCors("KretaCors");
+        }
+
+        private static void ConfigureInMemoryTestData(this WebApplication app)
+        {
             // InMemory database data
             using (var scope = app.Services.CreateAsyncScope())
             {

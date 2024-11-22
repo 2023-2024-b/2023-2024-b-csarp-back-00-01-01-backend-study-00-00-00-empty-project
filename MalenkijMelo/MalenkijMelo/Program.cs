@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors("KretaCors");
+app.ConfigureWebApp(); // CORS és Tesztadatok
 
 app.Run();
