@@ -4,7 +4,7 @@ namespace PipeLine.Context
 {
     public class PipeLineInMemoryContext: PipeLineContext
     {
-        public PipeLineInMemoryContext(DbContextOptions<PipeLineInMemoryContext> options) : base(options)
+        public PipeLineInMemoryContext(DbContextOptions options) : base(options)
         {
             
         }
