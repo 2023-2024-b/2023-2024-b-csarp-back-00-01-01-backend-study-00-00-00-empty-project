@@ -1,4 +1,5 @@
-﻿using PipeLine.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using PipeLine.Context;
 
 namespace PipeLine.Extensions
 {
@@ -23,6 +24,15 @@ namespace PipeLine.Extensions
            );
         }
 
-        
+        public static void ConfigureInMemoryContext(this IServiceCollection services)
+        {
+            string dbNameInMemoryContext = "PipeLine" + Guid.NewGuid();
+            services.AddDbContext<PipeLineInMemoryContext>
+            (
+                 options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),
+                 ServiceLifetime.Scoped,
+                 ServiceLifetime.Scoped
+            );
+        }
     }
 }
