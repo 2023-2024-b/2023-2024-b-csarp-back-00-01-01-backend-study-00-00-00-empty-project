@@ -1,4 +1,7 @@
-﻿namespace MalenkijMelo.Api.Controllers.Extension
+﻿using MalenkijMelo.Api.Contexts;
+using Microsoft.EntityFrameworkCore;
+
+namespace MalenkijMelo.Api.Extension
 {
     public static class KreateBackendExtension
     {
@@ -19,6 +22,19 @@
                     }
                 )
            );
+        }
+
+        public static void ConfigureInMemoryContext(this IServiceCollection services)
+        {
+            string dbNameInMemoryContext = "Kreta" + Guid.NewGuid();
+            services.AddDbContext<MalenkijMeloInMemoryContext>
+            (
+                 options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),
+                 ServiceLifetime.Scoped,
+                 ServiceLifetime.Scoped
+            );
+
+
         }
     }
 }
