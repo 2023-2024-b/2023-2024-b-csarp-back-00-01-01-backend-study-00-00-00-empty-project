@@ -2,7 +2,10 @@
 
 namespace PipeLine.Context
 {
-    public class PipeLineContext: DbContext
+    public class PipeLineContext : DbContext
     {
+        public PipeLineContext(DbContextOptions options) : base(options)
+        {
+        }
     }
 }
