@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddBackend();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,5 +26,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("PipeLineCors");
 
 app.Run();
