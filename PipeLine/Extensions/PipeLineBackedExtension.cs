@@ -1,4 +1,6 @@
-﻿namespace PipeLine.Extensions
+﻿using PipeLine.Context;
+
+namespace PipeLine.Extensions
 {
     public static class PipeLineBackedExtension
     {
@@ -20,5 +22,7 @@
                 )
            );
         }
+
+        
     }
 }

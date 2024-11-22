@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors("PipeLineCors");
+app.ConfigureWebApp();
 
 app.Run();
