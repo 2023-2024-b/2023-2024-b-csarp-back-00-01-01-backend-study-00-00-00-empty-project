@@ -4,7 +4,7 @@
     {
         public static void AddBackend(this IServiceCollection services)
         {
-
+            services.ConfigureCors();
         }
 
         private static void ConfigureCors(this IServiceCollection services)
