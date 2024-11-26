@@ -1,0 +1,6 @@
+@MalenkijMelo.Api_HostAddress = http://localhost:5170
+
+GET {{MalenkijMelo.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
