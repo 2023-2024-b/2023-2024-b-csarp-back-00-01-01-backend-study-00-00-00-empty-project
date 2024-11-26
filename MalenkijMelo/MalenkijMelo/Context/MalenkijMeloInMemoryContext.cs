@@ -4,7 +4,7 @@ namespace MalenkijMelo.Context
 {
     public class MalenkijMeloInMemoryContext : MalenkijMeloContext
     {
-        protected MalenkijMeloInMemoryContext(DbContextOptions options) : base(options)
+        public MalenkijMeloInMemoryContext(DbContextOptions options) : base(options)
         {
 
         }
