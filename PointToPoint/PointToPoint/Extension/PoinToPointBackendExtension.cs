@@ -25,7 +25,7 @@ namespace PointToPoint.Extension
         }
         public static void ConfigureInMemoryContext(this IServiceCollection services)
         {
-            string dbNameInMemoryContext = "PtP" + Guid.NewGuid();
+            string dbNameInMemoryContext = "PointToPoint" + Guid.NewGuid();
             services.AddDbContext<PointToPointInMemoryContext>
             (
                  options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),

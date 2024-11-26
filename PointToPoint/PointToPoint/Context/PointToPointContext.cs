@@ -2,11 +2,10 @@
 
 namespace PointToPoint.Context
 {
-    public class PointToPointContext :DbContext
+    public class PointToPointContext : DbContext
     {
-        public PointToPointContext(DbContextOptions options) : base()
+        public PointToPointContext(DbContextOptions options) : base(options)
         {
-
         }
     }
 }
