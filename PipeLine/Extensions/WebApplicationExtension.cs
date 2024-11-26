@@ -12,7 +12,7 @@ namespace PipeLine.Extensions
 
         private static void ConfigureWebAppCors(this WebApplication app)
         {
-            app.UseCors();
+            app.UseCors("PipeLineCors");
         }
 
         public static void ConfigureInMemoryTestData(this WebApplication app)

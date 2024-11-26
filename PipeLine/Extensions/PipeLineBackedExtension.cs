@@ -34,5 +34,6 @@ namespace PipeLine.Extensions
                  ServiceLifetime.Scoped
             );
         }
+
     }
 }
