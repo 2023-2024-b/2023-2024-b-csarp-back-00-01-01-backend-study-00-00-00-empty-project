@@ -12,7 +12,7 @@ namespace MalenkijMelo.Backend.Extensions
 
         private static void ConfigureWebAppCors(this WebApplication app)
         {
-            app.UseCors("MalenkijMelo");
+            app.UseCors("MalenkijMeloCors");
         }
 
         private static void ConfigureInMemoryTestData(this WebApplication app)

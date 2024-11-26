@@ -28,7 +28,7 @@ namespace MalenkijMelo.Backend.Extensions
         public static void ConfigureInMemoryContext(this IServiceCollection services)
         {
             string dbNameInMemoryContext = "MalenkijMelo" + Guid.NewGuid();
-            services.AddDbContext<MalenkijMeloBackendExtension>
+            services.AddDbContext<MalenkijMeloInMemoryContext>
             (
                  options => options.UseInMemoryDatabase(databaseName: dbNameInMemoryContext),
                  ServiceLifetime.Scoped,

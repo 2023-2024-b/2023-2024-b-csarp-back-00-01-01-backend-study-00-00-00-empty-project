@@ -27,7 +27,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-
 app.ConfigureWebApp();
 
 
