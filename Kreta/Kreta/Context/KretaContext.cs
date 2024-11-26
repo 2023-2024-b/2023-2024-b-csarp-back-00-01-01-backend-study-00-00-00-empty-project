@@ -6,7 +6,6 @@ namespace Kreta.Context
     {
         protected KretaContext(DbContextOptions options) : base(options)
         {
-
         }
     }
 }
