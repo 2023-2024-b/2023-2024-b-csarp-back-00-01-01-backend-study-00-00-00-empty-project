@@ -14,7 +14,7 @@ namespace MalenkijMelo.Extensions
         private static void ConfigureCors(this IServiceCollection services)
         {
             services.AddCors(option =>
-                 option.AddPolicy(name: "KretaCors",
+                 option.AddPolicy(name: "MalenkijMeloCors",
                      policy =>
                      {
                          policy.WithOrigins("https://0.0.0.0:7020/")
