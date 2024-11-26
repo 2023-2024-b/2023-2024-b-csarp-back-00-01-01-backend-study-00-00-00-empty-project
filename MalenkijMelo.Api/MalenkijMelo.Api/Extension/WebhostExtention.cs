@@ -4,7 +4,7 @@
     {
         public static void ConfigWebhost(this WebApplicationBuilder webApplicationBuilder )
         {
-            webApplicationBuilder.WebHost.UseUrls("http://0.0.0.0:7020");
+            webApplicationBuilder.WebHost.UseUrls("https://0.0.0.0:7020");
         }
     }
 }

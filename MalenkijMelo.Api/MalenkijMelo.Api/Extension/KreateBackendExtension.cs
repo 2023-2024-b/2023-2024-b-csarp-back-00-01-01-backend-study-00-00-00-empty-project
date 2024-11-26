@@ -8,6 +8,7 @@ namespace MalenkijMelo.Api.Extension
         public static void AddBackend(this IServiceCollection services)
         {
             services.ConfigureCors();
+            services.ConfigureInMemoryContext();
         }
 
         private static void ConfigureCors(this IServiceCollection services)
